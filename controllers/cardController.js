@@ -14,7 +14,7 @@ const getDetails = async (req, res) => {
 
 const sendContact = (req, res) => {
   const { name, phone, email, message } = req.body;
-  const cardOwnerNumber = '971555151350'; // Dubai number: +971555151350 (remove + for WhatsApp API)
+  const cardOwnerNumber = '971521977368'; // Dubai number: +971555151350 (remove + for WhatsApp API)
   const text = encodeURIComponent(
     `New Contact Submission:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`
   );

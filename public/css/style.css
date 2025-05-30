@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #3d6cb9, #4f8bd6);
+  background: linear-gradient(135deg, black, black, black, black);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   color: #333;
@@ -96,7 +96,7 @@ body {
 
 .card-header .company-title {
   font-size: 1.8em;
-  color: #1e3c72;
+  color: gold;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
