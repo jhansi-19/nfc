@@ -70,6 +70,8 @@ body {
 
 .front-content {
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 10px; /* Add spacing between elements */
 }
 
 .back-content {
@@ -81,8 +83,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 80px; /* Fixed width for consistency */
+  height: 80px;
 }
 
 .qr-code {
@@ -95,16 +97,24 @@ body {
 }
 
 .card-header .company-title {
-  font-size: 1.8em;
-  color: #F5D7C2;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: row; /* Align "RISE" and "Properties" horizontally */
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between "RISE" and logo */
+  color: black; /* Match the background color for blending */
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+  font-size: 1.8em; /* Base font size */
+  flex: 1; /* Allow the title to take available space */
+  text-align: center;
 }
 
 .company-logo {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 8px;
   border: 2px solid #d4af37;
   object-fit: contain;
@@ -298,8 +308,8 @@ body {
 .share-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap; /* Allow wrapping if screen is too small */
+  gap :všet 10px;
+  flex-wrap: wrap ; /* Allow wrapping if screen is too small */
 }
 
 .modal-share-button {
@@ -308,7 +318,9 @@ body {
   padding: 10px;
   border: none;
   border-radius: 50%;
-  font-size: 1.5em;
+  font-size: 1
+
+.5em;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 8px rgba(30, 60, 114, 0.2);
@@ -436,9 +448,15 @@ body {
 
   .card-header .company-title {
     font-size: 1.5em;
+    gap: 8px; /* Slightly smaller gap */
   }
 
   .company-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .qr-code-container {
     width: 60px;
     height: 60px;
   }
@@ -480,13 +498,30 @@ body {
 
 @media (max-width: 480px) {
   .card-header {
-    flex-direction: column;
     text-align: center;
     gap: 10px;
   }
 
+  .front-content {
+    flex-direction: row; /* Keep the layout horizontal */
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .card-header .company-title {
-    font-size: 1.3em;
+    font-size: 1.2em; /* Slightly smaller but consistent */
+    gap: 6px; /* Adjust gap for smaller screens */
+    flex: 1;
+  }
+
+  .company-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .qr-code-container {
+    width: 50px;
+    height: 50px;
   }
 
   .qr-code {
@@ -518,6 +553,7 @@ body {
     max-width: 120px;
   }
 }
+
 a[href^="tel"] {
   text-decoration: none;
   color: inherit;

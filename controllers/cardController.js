@@ -33,13 +33,13 @@ BEGIN:VCARD
 VERSION:3.0
 FN:MUHAMMAD TAHIR
 ORG:Managing Director Diplomat Properties
-TEL;TYPE=CELL:00971555151350
-TEL;TYPE=CELL:00971505151350
-TEL;TYPE=CELL:00447955151350
-TEL;TYPE=CELL:00923345151350
-EMAIL:[tahirbaig77@gmail.com]
-URL:http://www.dpdxb.com
-ADR:;;PO Box No 181702 Office NO.807 Opal Tower Business Bay;Dubai;;UAE
+TEL;TYPE=CELL:00971521977368
+TEL;TYPE=CELL:00971585809032
+TEL;TYPE=CELL:0097145665109
+
+EMAIL:[Afaf@riseproperties.ae]
+URL:http://www.riseproperties.ae
+ADR:;;PO Box No 455979 Office NO.1607 Opal Tower Business Bay;Dubai;;UAE
 END:VCARD
   `.trim();
 
