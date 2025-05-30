@@ -1,7 +1,7 @@
 const QRCode = require('qrcode');
 
 const getDetails = async (req, res) => {
-  const detailsUrl = `http://192.168.0.196:3000/details`; // e.g., https://your-app.onrender.com/details
+  const detailsUrl = `https://nfc-cbsv.onrender.com/details`; // e.g., https://your-app.onrender.com/details
   try {
     const qrCodeDataUrl = await QRCode.toDataURL(detailsUrl);
     res.render('details', { message: req.session.message, qrCodeDataUrl });
