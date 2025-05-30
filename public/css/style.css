@@ -96,7 +96,7 @@ body {
 
 .card-header .company-title {
   font-size: 1.8em;
-  color: gold;
+  color: #F5D7C2;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
@@ -517,4 +517,8 @@ body {
   .submit-button {
     max-width: 120px;
   }
+}
+a[href^="tel"] {
+  text-decoration: none;
+  color: inherit;
 }
