@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Share Functionality
-  const detailsUrl = `${window.BASE_URL}/details`;
+  const detailsUrl = `https://nfc-cbsv.onrender.com/details`;
 
   // WhatsApp Share
   document.querySelector('.whatsapp-share').addEventListener('click', () => {
