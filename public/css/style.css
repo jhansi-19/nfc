@@ -1,0 +1,520 @@
+/* public/css/style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #3d6cb9, #4f8bd6);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Visiting Card Styles */
+.visiting-card {
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  width: 380px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin: 20px auto;
+  border: 2px solid #d4af37; /* Gold border for a premium look */
+  position: relative;
+  overflow: hidden;
+}
+
+.visiting-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #d4af37, #b8972e);
+}
+
+/* Card Header (Company Name, Logo, and QR Code with Toggle Effect) */
+.card-header {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.flip-container {
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  position: relative;
+  cursor: pointer;
+}
+
+.front-content, .back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.front-content {
+  justify-content: space-between;
+}
+
+.back-content {
+  justify-content: center;
+  background: #fff; /* Ensure the background is white for QR code visibility */
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.qr-code {
+  max-width: 80px; /* Adjust size to fit within the header */
+  max-height: 80px;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 5px;
+  background: #fff;
+}
+
+.card-header .company-title {
+  font-size: 1.8em;
+  color: #1e3c72;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.company-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  border: 2px solid #d4af37;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.company-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Agent Section */
+.agent-section {
+  margin-bottom: 25px;
+}
+
+.agent-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #d4af37;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.agent-name {
+  font-size: 1.4em;
+  color: #1e3c72;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.agent-role {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.agent-registration {
+  font-size: 0.9em;
+  color: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.registration-symbol {
+  color: #d4af37;
+  font-size: 1.2em;
+}
+
+/* Card Details */
+.card-details {
+  margin-bottom: 25px;
+}
+
+.card-details p {
+  margin: 12px 0;
+  color: #34495e;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-details a {
+  color: #1e3c72;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-details a:hover {
+  color: #d4af37;
+}
+
+.detail-icon {
+  color: #d4af37;
+  font-size: 1.2em;
+}
+
+/* Card Footer (Buttons) */
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 15px;
+}
+
+.send-contact-button {
+  width: 100%; /* Full width for Send Your Contact button */
+  margin-top: 10px;
+}
+
+/* Action Buttons */
+.action-button {
+  background: #1e3c72;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(30, 60, 114, 0.2);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.action-button:hover {
+  background: #d4af37;
+  color: #1e3c72;
+  transform: scale(1.05);
+}
+
+/* Share Modal Styles */
+.share-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.share-modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  margin: 20% auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.5s ease;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.share-modal-content h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #1e3c72;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+/* QR Code in Modal */
+.share-modal-content .qr-code-container {
+  margin-bottom: 10px;
+}
+
+.share-modal-content .qr-code {
+  max-width: 100px;
+  max-height: 100px;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 5px;
+  background: #fff;
+}
+
+.qr-instruction {
+  font-size: 0.9em;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+/* Share Buttons in Horizontal Line */
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Allow wrapping if screen is too small */
+}
+
+.modal-share-button {
+  background: #1e3c72;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(30, 60, 114, 0.2);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-share-button:hover {
+  background: #d4af37;
+  color: #1e3c72;
+  transform: scale(1.05);
+}
+
+.whatsapp-share { background: #25D366; }
+.whatsapp-share:hover { background: #1DA851; }
+
+.facebook-share { background: #4267B2; }
+.facebook-share:hover { background: #365899; }
+
+.twitter-share { background: #1DA1F2; }
+.twitter-share:hover { background: #0d95e8; }
+
+.email-share { background: #D44638; }
+.email-share:hover { background: #B23121; }
+
+.outlook-share { background: #0072C6; }
+.outlook-share:hover { background: #005BA1; }
+
+.telegram-share { background: #0088CC; }
+.telegram-share:hover { background: #006699; }
+
+.messenger-share { background: #00B2FF; }
+.messenger-share:hover { background: #0099CC; }
+
+.linkedin-share { background: #0077B5; }
+.linkedin-share:hover { background: #005E8A; }
+
+/* Send Contact Form Styles */
+.share-modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.share-modal-content label {
+  font-weight: 500;
+  color: #34495e;
+  text-align: left;
+}
+
+.share-modal-content input,
+.share-modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  background: #1e3c72; /* Match the primary button color */
+  color: rgba(245, 244, 250, 0.983); /* High contrast text color */
+  padding: 10px 20px; /* Consistent padding with action buttons */
+  border: none;
+  border-radius: 25px; /* Match the rounded style of other buttons */
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(30, 60, 114, 0.2); /* Subtle shadow for depth */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-top: 10px; /* Ensure spacing above the button */
+  width: 100%; /* Full width for better visibility */
+  max-width: 200px; /* Limit width for better appearance */
+  align-self: center; /* Center the button in the form */
+}
+
+.submit-button:hover {
+  background: #d4af37; /* Match hover color of other buttons */
+  color: #1e3c72;
+  transform: scale(1.05); /* Slight scale on hover for interactivity */
+}
+
+/* Message Styles */
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .visiting-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .card-header .company-title {
+    font-size: 1.5em;
+  }
+
+  .company-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .qr-code {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .agent-photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .action-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  .share-modal-content {
+    margin: 30% auto;
+    padding: 15px;
+  }
+
+  .modal-share-button {
+    margin: 5px;
+    padding: 8px;
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+  }
+
+  .submit-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .card-header .company-title {
+    font-size: 1.3em;
+  }
+
+  .qr-code {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .share-modal-content {
+    margin: 40% auto;
+  }
+
+  .agent-name {
+    font-size: 1.2em;
+  }
+
+  .agent-role {
+    font-size: 0.8em;
+  }
+
+  .agent-registration {
+    font-size: 0.8em;
+  }
+
+  .share-buttons {
+    gap: 5px;
+  }
+
+  .submit-button {
+    max-width: 120px;
+  }
+}
