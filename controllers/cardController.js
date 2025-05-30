@@ -31,8 +31,8 @@ const downloadVCard = (req, res) => {
   const vCardData = `
 BEGIN:VCARD
 VERSION:3.0
-FN:MUHAMMAD TAHIR
-ORG:Managing Director Diplomat Properties
+FN:Afaf Mohammad Marouf
+ORG:Sales Manager Rise Properties
 TEL;TYPE=CELL:00971521977368
 TEL;TYPE=CELL:00971585809032
 TEL;TYPE=CELL:0097145665109
