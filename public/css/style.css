@@ -102,7 +102,7 @@ body {
   flex-direction: row; /* Align "RISE" and "Properties" horizontally */
   align-items: center;
   justify-content: center;
-  gap: 10px; /* Space between "RISE" and logo */
+  gap: 5px; /* Space between "RISE" and logo */
   color: black; /* Match the background color for blending */
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -113,8 +113,8 @@ body {
 }
 
 .company-logo {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   border-radius: 8px;
   border: 2px solid #d4af37;
   object-fit: contain;
